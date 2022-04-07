@@ -1,0 +1,45 @@
+header{
+    background-color: #e61919;
+    height: 110px;
+    width: 99%;
+    position: fixed;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+}
+
+h1.titulo_header{
+    font-family:'Bahnschrift','Arial';
+    color: black;
+}
+
+h4.subtitulo_header{
+    font-family:'Bahnschrift','Arial';
+    color: black;
+    margin-top: 1%;
+    text-align: left;
+}
+
+header img#banner{
+    position: absolute;
+    left: 26%;
+    right: 0;
+    top: 19%;
+    margin: auto;
+    width: 310px;
+}
+
+header img#logo{
+    position: absolute;
+    left: 87%;
+    right: 0;
+    top: 19%;
+    margin: auto;
+    width: 100px;
+    height: 100x;
+}
+
+
+main{
+    height: 1500px;
+}
