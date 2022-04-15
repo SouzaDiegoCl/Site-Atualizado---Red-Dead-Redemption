@@ -2,15 +2,21 @@
     padding: 0px;
     margin: 0px;
 }
+body{
+    padding-top: 120px;
+}
+
 header{
     background-color: transparent;
     height: 120px;
     width: 100%;
+    top: 0;
     position: fixed;
     background-image: url(../imagens/backgroun_header.jpeg);
     background-repeat: repeat;
     background-size:cover;
     background-position: center center;
+    z-index: 10;
 }
 
 @font-face {
@@ -43,7 +49,7 @@ h3.subtitulo_header{
 
 header img#banner_left{
     position: absolute;
-    left: 4%;
+    left: 2%;
     top: 13%;
     width: 280px;
     height: 89px;
@@ -52,7 +58,7 @@ header img#banner_left{
 }
 header img#banner_right{
     position: absolute;
-    right: 4%;
+    right: 2%;
     top: 13%;
     width: 250px;
     height: 89px;
@@ -61,5 +67,70 @@ header img#banner_right{
 }
 
 main{
-    height: 1500px;
+    background-color: rgb(245, 245, 245);
+    height: 1000px;
+    position: relative;
+    z-index: 9;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'ChineseRocks','Bahnschrift';
+    font-size: 22px;
+    display: block;
+    padding: 20px 5px;
+    text-shadow: 3px 3px 2px black;
+}
+a:hover{
+    background-color: rgb(248, 238, 238);
+    color: black;
+    text-shadow: 0 0 0 ;
+}
+ul{
+    list-style: none;
+    top: 75px;
+    position:absolute;
+    width: 100%;
+    text-align: left;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+nav{
+    background-color: rgb(200, 3, 16, 0.7);
+    width: 200px;
+    height: 410px;
+    top: -800px;
+    left: 70px;
+    position: relative;
+    transition: all 0.9s;
+    border-color: black;
+    border-width: 1px;
+    border-style:solid;
+    border-radius: 2%;
+}
+input[type="checkbox"]:checked ~ nav{
+    transform: translateY(840px);    
+}
+label{
+    margin-top: 40px;
+    margin-left:70px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    padding-top: 15px;
+    position: absolute;
+    background-color: rgba(200, 3, 16,0.9);
+    z-index: 2;
+    font-family: 'ChineseRocks','Bahnschsrift';
+    font-size: 25px;
+    color: white;
+    text-shadow: 3px 3px 2px black;
+    border-color: black;
+    border-width: 1px;
+    border-style:solid;
+    border-radius: 1%;
 }
