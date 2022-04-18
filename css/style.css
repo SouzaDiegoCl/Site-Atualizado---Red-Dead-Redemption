@@ -7,16 +7,15 @@ body{
 }
 
 header{
-    background-color: transparent;
     height: 120px;
     width: 100%;
     top: 0;
-    position: fixed;
-    background-image: url(../imagens/backgroun_header.jpeg);
+    position:absolute;
     background-repeat: repeat;
     background-size:cover;
     background-position: center center;
     z-index: 10;
+    background-image: linear-gradient(to bottom left, rgb(179, 0, 15), rgb(168, 5, 5));
 }
 
 @font-face {
@@ -67,7 +66,7 @@ header img#banner_right{
 }
 
 main{
-    background-color: rgb(245, 245, 245);
+    background-image: linear-gradient(to top left, rgb(255, 255, 255), rgb(236, 236, 236));
     height: 1000px;
     position: relative;
     z-index: 9;
@@ -81,15 +80,18 @@ a{
     display: block;
     padding: 20px 5px;
     text-shadow: 3px 3px 2px black;
+    
 }
 a:hover{
-    background-color: rgb(248, 238, 238);
+    background-color: white;
     color: black;
     text-shadow: 0 0 0 ;
+    text-decoration: underline;
+    opacity: 0.8;
 }
 ul{
     list-style: none;
-    top: 75px;
+    top: 60px;
     position:absolute;
     width: 100%;
     text-align: left;
@@ -102,35 +104,114 @@ input[type="checkbox"]
 nav{
     background-color: rgb(200, 3, 16, 0.7);
     width: 200px;
-    height: 410px;
-    top: -800px;
-    left: 70px;
+    height: 0px;
+    top: 20px;
+    left: 66px;
     position: relative;
-    transition: all 0.9s;
     border-color: black;
     border-width: 1px;
     border-style:solid;
     border-radius: 2%;
+    background-image: url(../imagens/fundo_tematico.png);
+    z-index: 2;
+    overflow:hidden ;
+    transition: all 0.8s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
 }
 input[type="checkbox"]:checked ~ nav{
-    transform: translateY(840px);    
+    height: 375px;
+}
+input[type="checkbox"]:checked ~ img#img_menu{
+    transform: translateY(-55px);    
 }
 label{
-    margin-top: 40px;
-    margin-left:70px;
+    margin-top: 20px;
+    margin-left:66px;
     text-align: center;
     width: 200px;
     height: 40px;
     padding-top: 15px;
     position: absolute;
     background-color: rgba(200, 3, 16,0.9);
-    z-index: 2;
+    z-index: 3;
     font-family: 'ChineseRocks','Bahnschsrift';
     font-size: 25px;
+    color: black;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-style:solid;
+    border-radius: 3%;
+    background-image: url(../imagens/fundo_tematico.png);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+label:hover{
+    opacity: 1;
     color: white;
     text-shadow: 3px 3px 2px black;
-    border-color: black;
-    border-width: 1px;
-    border-style:solid;
-    border-radius: 1%;
+
+}
+img#img_menu{
+    width: 200px;
+    height: 350px;
+    margin-left:66px;
+    margin-top: 85px;
+    transition: all 0.8s;
+    z-index: 1;
+    border-radius: 2%;
+    position:absolute;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0,0,0,0.9);
+    background-color: black;
+}
+
+
+div.container{
+    width: 750px;
+    position: absolute;
+    top: 23%;
+    left: 51%;
+    transform: translate(-50%,-50%);
+    border: 3px solid rgba(0, 0, 0,0.9);
+    border-radius: 10px;
+    box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.5);
+    overflow:hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+div.img-container{
+    width: 100%;
+    display: flex;
+    animation: slide 35s infinite;
+}
+@keyframes slide{
+    0% {transform: translateX(0%);}
+    5% {transform: translateX(0%);}
+    10% {transform: translateX(-100%);}
+    15% {transform: translateX(-100%);}
+    20% {transform: translateX(-200%);}
+    25% {transform: translateX(-200%);}
+    30% {transform: translateX(-300%);}
+    35% {transform: translateX(-300%);}
+    40% {transform: translateX(-400%);}
+    45% {transform: translateX(-400%);}
+    50% {transform: translateX(-500%);}
+    55% {transform: translateX(-500%);}
+    60% {transform: translateX(-400%);}
+    65% {transform: translateX(-400%);}
+    70% {transform: translateX(-300%);}
+    75% {transform: translateX(-300%);}
+    80% {transform: translateX(-200%);}
+    85% {transform: translateX(-200%);}
+    90% {transform: translateX(-100%);}
+    95% {transform: translateX(-100%);}
+    100% {transform: translateX(-0%);}
+}
+img{
+    width: 100%;
+}
+
+
+footer{
+    height: 200px;
 }
