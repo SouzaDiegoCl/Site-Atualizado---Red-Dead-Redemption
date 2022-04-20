@@ -109,19 +109,20 @@ nav{
     left: 66px;
     position: relative;
     border-color: black;
-    border-width: 1px;
+    border-width: 2px;
     border-style:solid;
     border-radius: 2%;
     background-image: url(../imagens/fundo_tematico.png);
     z-index: 2;
     overflow:hidden ;
     transition: all 0.8s ease;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 input[type="checkbox"]:checked ~ nav{
     height: 375px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
+
 input[type="checkbox"]:checked ~ img#img_menu{
     transform: translateY(-55px);    
 }
